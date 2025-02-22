@@ -13,7 +13,7 @@
       }
 
       body {
-        background-color: #f4f4f9;
+        background: linear-gradient(135deg, #3636a5, #1f1f7a);
       }
 
       /* Navbar Styling */
@@ -110,6 +110,26 @@
         font-size: 14px;
         color: #666;
       }
+
+      input, select, button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border: none;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
     </style>
   </head>
   <body>
@@ -144,19 +164,16 @@
       <form action="http://127.0.0.1:5000/courses/" method="post" enctype="multipart/form-data">
         <div>
           <label for="name">Course Name</label>
-          <br>
           <input type="text" name="name" placeholder="Course Name" value="{{ request.form['name'] }}">
         </div>
         <br>
         <div>
           <label for="duration">Duration</label>
-          <br>
           <input type="text" name="duration" placeholder="Duration" value="{{ request.form['duration'] }}">
         </div>
         <br>
         <div>
           <label for="file">Upload Syllabus</label>
-          <br>
           <input type="file" name="file">
         </div>
         <br>
