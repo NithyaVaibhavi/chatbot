@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            background-image: url("/static/bgi2.avif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: linear-gradient(135deg, #007bff, #6610f2);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                padding-top: 10px;
+                flex-direction: column;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 40px auto;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .chatbot-info {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Admin Panel</a>
+        <ul class="nav-links">
+            <li><a href="/teachers">Teachers</a></li>
+            <li><a href="/students">Students</a></li>
+            <li><a href="/courses">Courses</a></li>
+            <li><a href="/holidays">Holidays</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Chatbot Overview</h2>
+        <p class="chatbot-info">
+            Welcome to the <span class="highlight">Admin Panel</span> for the AI-powered chatbot. This chatbot is designed to assist users by providing relevant
+            information and answering queries efficiently. 
+        </p>
+        <p class="chatbot-info">
+            Our chatbot is built using <span class="highlight">Natural Language Processing (NLP)</span> techniques with frameworks such as
+            <span class="highlight">NLTK</span> and <span class="highlight">spaCy</span>. It leverages a trained neural network model to understand
+            user intent and provide meaningful responses.
+        </p>
+        <p class="chatbot-info">
+            The system is integrated with a Flask-based backend and supports dynamic learning,
+            ensuring continuous improvements in response accuracy over time.
+        </p>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Chatbot Admin Panel. All rights reserved.
+    </div>
+
+</body>
+</html>

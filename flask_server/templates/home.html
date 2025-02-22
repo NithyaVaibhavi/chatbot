@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Enquiry Chatbot</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}" />
+</head>
+
+<body>
+  <!-- Header with Login and Register buttons -->
+  <header>
+    <h1>College Enquiry Chatbot System</h1>
+    <div>
+      <!-- <button onclick="window.location.href='login.html'" id="login-btn">Login</button> -->
+    <!-- <button onclick="location.href='{{ url_for('login') }}'" id="login-btn">Login</button>
+    <button onclick="location.href='{{ url_for('register') }}'" id="register-btn">Register</button> -->
+    <a href="{{ url_for('login') }}">
+      <button id="login-btn">Login</button>
+    </a>
+    <a href="{{ url_for('register') }}">
+      <button id="register-btn">Register</button>
+    </a>
+    </div>
+  </header>
+
+  <!-- Chatbot Section -->
+  <div class="chatbot-section">
+    <figure class="mobile hidden">
+      <div class="app">
+        <!-- Header -->
+        <div class="header">
+          <!-- avatar -->
+          <img class="avatar" src="{{url_for('static',filename='dp.png')}}" alt="Chatbot" />
+          <div>
+            <p>NIT Enquiry CHATBOT</p>
+            <span>Online</span>
+          </div>
+        </div>
+
+        <!-- Chat section -->
+        <div class="chat-messages">
+          <div class="chat-message incoming-message">
+            👋 Hello, I am College Enquiry Bot
+          </div>
+          <div class="chat-message incoming-message">
+            Ask me anything related to :
+            <ol>
+              <li>Semester wise result 📜📚</li>
+              <li>Faculty 🧑‍🏫👩‍🏫</li>
+              <li>Holidays 🥳</li>
+              <li>Joke 😃</li>
+              <li>etc...</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Chat input section -->
+        <div class="chat-input-section">
+          <form id="chat-form">
+            <input id="chat-input" type="text" aria-label="chat-input" placeholder="Type a message ..." />
+            <button class="svg-btn" type="submit" aria-label="send-message-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="chat-input-svg" fill="none" viewBox="0 0 24 24"
+                stroke="white">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </figure>
+    <div class="button-container">
+      <button onclick="toggleChatBot()" class="chat-open-btn">
+        <img src="https://cdn.onlinewebfonts.com/svg/img_397748.png" alt="chat bot" />
+      </button>
+    </div>
+  </div>
+
+  <footer>This site is coded by Abhik Bhattacharya , Pritam Chatterjee & Aliva Mandal</footer>
+  <script src="{{url_for('static',filename='chat.js')}}"></script>
+</body>
+
+</html>

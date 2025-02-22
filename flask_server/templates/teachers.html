@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teachers</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      body {
+        background-color: #f4f4f9;
+      }
+      .navbar {
+        background: linear-gradient(135deg, #007bff, #6610f2);
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .navbar .logo {
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+      .nav-links li {
+        margin: 0 15px;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+      }
+      .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .container {
+        width: 80%;
+        max-width: 900px;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 40px auto;
+      }
+      .container h2 {
+        margin-bottom: 20px;
+        color: #007bff;
+      }
+      .teachers-list {
+        text-align: left;
+      }
+      .teachers-list ul {
+        list-style: none;
+        padding: 0;
+      }
+      .teachers-list li {
+        background: #e9ecef;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .teachers-list a {
+        text-decoration: none;
+        color: #fff;
+        background: #007bff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      .teachers-list a:hover {
+        background: #0056b3;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+      input, select, button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border: none;
+        transition: 0.3s;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/admin" class="logo">HOME</a>
+      <ul class="nav-links">
+        <li><a href="/teachers">Teachers</a></li>
+        <li><a href="/students">Students</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/holidays">Holidays</a></li>
+      </ul>
+    </nav>
+    
+    <div class="container">
+      <h2>All Teachers</h2>
+      <div class="teachers-list">
+        <ul>
+          {% for teacher in teachers %}
+          <li>
+            <span>{{ teacher.name }} - {{ teacher.id }} ({{ teacher.department }})</span>
+            <a href="http://127.0.0.1:5000/teachers/delete/{{ teacher.id }}/">Delete</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container">
+      <h2>Add a Teacher</h2>
+      <form action="http://127.0.0.1:5000/teachers/" method="post">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder="Name" value="{{ request.form['name'] }}">
+        </div>
+        <br>
+        <div>
+          <label for="department">Department</label>
+          <input type="text" name="department" placeholder="Department" value="{{ request.form['department'] }}">
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    
+    <div class="footer">
+      &copy; 2025 Teachers Management. All rights reserved.
+    </div>
+  </body>
+</html>
