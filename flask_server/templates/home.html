@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,63 +7,196 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>College Enquiry Chatbot</title>
   <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      background-image: url("/static/bgi2.avif");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    header {
+    width: 100%;
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+}
+
+header h1 {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+header .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .nav-buttons a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    background: transparent;
+}
+
+header .nav-buttons a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+    .chatbot-section {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .app {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      max-width: 90vw;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .chat-messages {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 5px;
+    }
+
+    .chat-message {
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .incoming-message {
+      background: #e3f2fd;
+    }
+
+    .chat-input-section {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .chat-input-section input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .chat-input-section button {
+      padding: 8px 12px;
+      border: none;
+      background: linear-gradient(135deg, #007bff, #6610f2);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 10px 20px;
+      }
+
+      header h1 {
+        font-size: 18px;
+      }
+
+      header button {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+
+      .app {
+        width: 100%;
+        max-width: 95vw;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Header with Login and Register buttons -->
   <header>
     <h1>College Enquiry Chatbot System</h1>
-    <div>
-      <!-- <button onclick="window.location.href='login.html'" id="login-btn">Login</button> -->
-    <!-- <button onclick="location.href='{{ url_for('login') }}'" id="login-btn">Login</button>
-    <button onclick="location.href='{{ url_for('register') }}'" id="register-btn">Register</button> -->
-    <a href="{{ url_for('login') }}">
-      <button id="login-btn">Login</button>
-    </a>
-    <a href="{{ url_for('register') }}">
-      <button id="register-btn">Register</button>
-    </a>
-    </div>
+    <div class="nav-buttons">
+      <a href="/login" id="login-btn">Login</a>
+      <a href="/register" id="register-btn">Register</a>
+  </div>
   </header>
 
-  <!-- Chatbot Section -->
   <div class="chatbot-section">
     <figure class="mobile hidden">
       <div class="app">
-        <!-- Header -->
         <div class="header">
-          <!-- avatar -->
-          <img class="avatar" src="{{url_for('static',filename='dp.png')}}" alt="Chatbot" />
+          <img class="avatar" src="{{url_for('static',filename='kmit img.webp')}}" alt="Chatbot" />
           <div>
-            <p>NIT Enquiry CHATBOT</p>
+            <p>Enquiry CHATBOT</p>
             <span>Online</span>
           </div>
         </div>
 
-        <!-- Chat section -->
         <div class="chat-messages">
+          <div class="chat-message incoming-message">👋 Hello, I am College Enquiry Bot</div>
           <div class="chat-message incoming-message">
-            👋 Hello, I am College Enquiry Bot
-          </div>
-          <div class="chat-message incoming-message">
-            Ask me anything related to :
-            <ol>
+            Ask me anything related to college ...
+            <!-- <ol>
               <li>Semester wise result 📜📚</li>
               <li>Faculty 🧑‍🏫👩‍🏫</li>
               <li>Holidays 🥳</li>
               <li>Joke 😃</li>
               <li>etc...</li>
-            </ol>
+            </ol> -->
           </div>
         </div>
 
-        <!-- Chat input section -->
         <div class="chat-input-section">
           <form id="chat-form">
-            <input id="chat-input" type="text" aria-label="chat-input" placeholder="Type a message ..." />
-            <button class="svg-btn" type="submit" aria-label="send-message-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="chat-input-svg" fill="none" viewBox="0 0 24 24"
-                stroke="white">
+            <input id="chat-input" type="text" placeholder="Type a message ..." />
+            <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" class="chat-input-svg" fill="none" viewBox="0 0 24 24" stroke="white">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -80,8 +211,6 @@
     </div>
   </div>
 
-  <footer>This site is coded by Abhik Bhattacharya , Pritam Chatterjee & Aliva Mandal</footer>
   <script src="{{url_for('static',filename='chat.js')}}"></script>
 </body>
-
 </html>

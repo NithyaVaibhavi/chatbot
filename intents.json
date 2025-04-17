@@ -1,118 +1,876 @@
 {
   "intents": [
     {
-      "tag": "greeting",
-      "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
-      ],
-      "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
-      ]
-    },
-    {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
-    },
-    {
-      "tag": "thanks",
-      "patterns": [
-        "Thanks",
-        "Thank you",
-        "That's helpful",
-        "Thank's a lot!",
-        "Okay"
-      ],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
       "tag": "holidays",
       "patterns": [
-        "When are holidays ? ",
-        "What kinds of holidays are there?",
-        "What holidays do we have?",
-        "tell more about holidays",
-        "holidays when ???",
-        "which days are holidays ?",
-        "How many days can we get after seach sem ?" ,
-        "Can we get study leave ?",
-        "what are the biggest holidays we can get ??",
-        "Are there any department wise special holiday ?"
+          "When are holidays ? ",
+          "What kinds of holidays are there?",
+          "What holidays do we have?",
+          "tell more about holidays",
+          "holidays when ???",
+          "which days are holidays ?",
+          "How many days can we get after each sem ?" ,
+          "Can we get study leave ?",
+          "what are the biggest holidays we can get ??",
+          "Are there any department wise special holiday ?"
+      ],
+      "keywords": [
+          "holiday", "holidays", "leave", "vacation", "off", "study leave", 
+          "semester break", "festivals", "weekend", "long break"
       ],
       "responses": [""]
-    },
-    {
+  },
+  {
+    "tag": "greeting",
+    "patterns": [
+      "Hi",
+      "Hey",
+      "How are you",
+      "Is anyone there?",
+      "Hello",
+      "Good day"
+    ],
+    "responses": [
+      "Hey :-)",
+      "Hello, thanks for visiting",
+      "Hi there, what can I do for you?",
+      "Hi there, how can I help?"
+    ]
+  },
+  {
+    "tag": "goodbye",
+    "patterns": ["Bye", "See you later", "Goodbye"],
+    "responses": [
+      "See you later, thanks for visiting",
+      "Have a nice day",
+      "Bye! Come back again soon."
+    ]
+  },
+  {
+    "tag": "thanks",
+    "patterns": [
+      "Thanks",
+      "Thank you",
+      "That's helpful",
+      "Thank's a lot!",
+      "Okay"
+    ],
+    "responses": ["Happy to help!", "Any time!", "My pleasure"]
+  },
+  {
       "tag": "faculty",
       "patterns": [
-        "Do you know the teachers ?",
-        "Who are the teachers ?",
-        "Can you tell more about teachers?",
-        "Tell me about teachers  ",
-        "more info on teachers",
-        "what are the teachers ?",
-        "tell more about the teachers",
-        "narula teachers",
-        "who is the the principal and what about the placement officer??" 
+          "Do you know the teachers ?",
+          "Who are the teachers ?",
+          "Can you tell more about teachers?",
+          "Tell me about teachers  ",
+          "more info on teachers",
+          "what are the teachers ?",
+          "tell more about the teachers",
+          "narula teachers",
+          "who is the the principal and what about the placement officer??" 
+      ],
+      "keywords": [
+          "teacher", "faculty", "professor", "lecturer", "principal", "staff",
+          "placement", "department", "prof", "mentor", "trainer"
       ],
       "responses": [
-        "Our Prinicipal is Dr. Maitreyi Ray Kanjilal \n Our Placement Cell has Biswarup Bhattacharjee , Abhijit Nandy , Debanjan Mitra. "
+          "Our Principal is Dr. Maitreyi Ray Kanjilal \n Our Placement Cell has Biswarup Bhattacharjee, Abhijit Nandy, Debanjan Mitra."
       ]
-    },
-    {
+  },
+  {
       "tag": "courses",
       "patterns": [
-        "Which Courses are offered here",
-        "tell me more about BCA",
-        "More info on BTECH please",
-        "What is MTECH ?",
-        "What is BCA ?",
-        "When do BTECH gets completed ?",
-        "How long does MCA take ?",
-        "which Course are best here ?" ,
-        "what about the fees Stucture ?" ,
-        "Are there any medical course ?" ,
-        "how many time will take to complete those course ?"
+          "Which Courses are offered here",
+          "tell me more about BCA",
+          "More info on BTECH please",
+          "What is MTECH ?",
+          "What is BCA ?",
+          "When do BTECH gets completed ?",
+          "How long does MCA take ?",
+          "which Course are best here ?" ,
+          "what about the fees Stucture ?" ,
+          "Are there any medical course ?" ,
+          "how many time will take to complete those course ?"
       ],
-      "responses": ["Course related queries", "MCA takes 2years"]
-    },
-    {
-      "tag": "funny",
-      "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
+      "keywords": [
+          "course", "courses", "BCA", "BTECH", "MCA", "MTECH", "degree", 
+          "study", "program", "fees", "duration", "engineering", "science"
       ],
-      "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
-      ]
-    },
-    {
+      "responses": ["Course related queries", "MCA takes 2 years"]
+  },
+  {
       "tag": "result",
       "patterns": [
-        "WHAT is my SGPA this sem ?",
-        "What is my CGPA this sem",
-        "Do you know my result?",
-        "Do you know my CGPA?",
-        "Do you know my curent cgpa?",
-        "tell me my cgpa?",
-        "tell me my curent sgpa?",
-        "tell me my result",
-        "what is my result"
+          "WHAT is my SGPA this sem ?",
+          "What is my CGPA this sem",
+          "Do you know my result?",
+          "Do you know my CGPA?",
+          "Do you know my curent cgpa?",
+          "tell me my cgpa?",
+          "tell me my curent sgpa?",
+          "tell me my result",
+          "what is my result"
       ],
-      "responses": ["tell me your student id , example : \n434121010021"]
-    }
+      "keywords": [
+          "result", "marks", "grades", "SGPA", "CGPA", "score", "performance",
+          "semester result", "academic", "gpa", "final marks"
+      ],
+      "responses": ["tell me your student id, example : \n434121010021"]
+  },
+      {
+          "tag": "Principal Information",
+          "patterns": [
+              "Who is the principal of KMIT?",
+              "Tell me about the principal of KMIT.",
+              "Can you provide details about Dr. B L Malleswari?"
+          ],
+          "responses": [
+              "Dr. B L Malleswari is the Principal at KMIT, Hyderabad. She has an impressive 28-year career in teaching at the engineering level and has previously served as Principal at Sridevi Women’s Engineering College. Dr. Malleswari holds a Ph.D. from JNTUH and an M.S. in Electronics and Control Systems from BITS Pilani. With over 130 publications, her research contributions span international and national journals, earning recognition with various IDs like Vidwan, Orcid, Scopus, and Google Scholar. She has received notable awards, including the Women in Education Award and Bharat Vikas Award. Dr. Malleswari has guided numerous Ph.D. and postgraduate projects, displaying a commitment to academic excellence."
+          ],
+          "keywords": [
+              "principal",
+              "Dr. B L Malleswari",
+              "KMIT"
+          ]
+      },
+      
+      {
+          "tag": "Admissions",
+          "patterns": [
+              "How can I apply to KMIT?",
+              "What are the eligibility criteria for admission?",
+              "What documents are needed for admission?",
+              "Can you explain the admission process?"
+          ],
+          "responses": [
+              "You can apply to KMIT through the official online application portal. Ensure you meet the eligibility criteria before applying.",
+              "The eligibility criteria vary based on the course. Generally, a strong academic background and qualifying entrance exam scores are required.",
+              "Documents needed for admission include academic transcripts, entrance exam scorecards, identity proof, and passport-sized photographs.",
+              "The admission process involves submitting an online application, attending counseling sessions, and completing the required documentation."
+          ],
+          "keywords": [
+              "apply",
+              "eligibility",
+              "documents",
+              "admission process"
+          ]
+      },
+      {
+          "tag": "Events and Activities",
+          "patterns": [
+              "What events are happening at KMIT this month?",
+              "Tell me about the Smart India Internal Hackathon at KMIT.",
+              "What are the upcoming seminars at KMIT?",
+              "What extracurricular activities are available at KMIT?"
+          ],
+          "responses": [
+              "This month, KMIT is hosting various events including technical seminars, cultural fests, and sports competitions.",
+              "The Smart India Internal Hackathon at KMIT is an event where over 60 teams participate, competing in hardware and software categories.",
+              "Upcoming seminars at KMIT include sessions on water conservation, river restoration, and modern technologies.",
+              "KMIT offers a range of extracurricular activities including clubs for robotics, coding, music, dance, and sports."
+          ],
+          "keywords": [
+              "events",
+              "hackathon",
+              "seminars",
+              "extracurricular"
+          ]
+      },
+      {
+          "tag": "Student Achievements",
+          "patterns": [
+              "What recent achievements have KMIT students accomplished?",
+              "Who are some notable alumni of KMIT?",
+              "Has any student won any awards recently?",
+              "What are some successful projects by KMIT students?"
+          ],
+          "responses": [
+              "Recent achievements include students winning national hackathons, securing top positions in exams, and getting international job offers.",
+              "Notable alumni of KMIT include successful entrepreneurs, renowned researchers, and professionals in top companies.",
+              "Yes, several students have won awards in competitions such as coding challenges, robotics, and sports events.",
+              "Successful projects by KMIT students include innovative solutions in AI, robotics, IoT, and sustainable technologies."
+          ],
+          "keywords": [
+              "achievements",
+              "alumni",
+              "awards",
+              "projects"
+          ]
+      },
+      {
+          "tag": "Campus Facilities",
+          "patterns": [
+              "What facilities are available on the KMIT campus?",
+              "Does KMIT have a research and development center?",
+              "Are there any sports facilities at KMIT?",
+              "What accommodation options are available for students?"
+          ],
+          "responses": [
+              "The KMIT campus has state-of-the-art facilities including modern classrooms, well-equipped labs, and a vast library.",
+              "Yes, KMIT has a dedicated research and development center focused on innovation and industry collaboration.",
+              "KMIT offers various sports facilities including a cricket ground, basketball court, and indoor sports complex.",
+              "Accommodation options for students include on-campus hostels with comfortable living arrangements and essential amenities."
+          ],
+          "keywords": [
+              "facilities",
+              "research",
+              "sports",
+              "accommodation"
+          ]
+      },
+      {
+          "tag": "Contact Information",
+          "patterns": [
+              "How can I contact KMIT?",
+              "What is the address of KMIT?",
+              "What are the office hours of KMIT?",
+              "Is there a helpline number for KMIT?"
+          ],
+          "responses": [
+              "You can contact KMIT through their official website or by calling the helpline number provided on the contact page.",
+              "The address of KMIT is Narayanaguda, Hyderabad, Telangana, India.",
+              "The office hours of KMIT are typically from 9 AM to 5 PM on weekdays.",
+              "Yes, there is a helpline number available on the KMIT website for any queries or assistance."
+          ],
+          "keywords": [
+              "contact",
+              "address",
+              "office hours",
+              "helpline"
+          ]
+      },
+      {
+          "tag": "Academic Information",
+          "patterns": [
+              "What is the academic calendar for KMIT?",
+              "What are the exam schedules at KMIT?",
+              "Are there any scholarships available?",
+              "What is the grading system at KMIT?"
+          ],
+          "responses": [
+              "The academic calendar for KMIT includes important dates for semesters, exams, and holidays. It is available on the official website.",
+              "The exam schedules at KMIT are announced well in advance and are available on the student portal.",
+              "Yes, KMIT offers various scholarships based on academic performance and financial need.",
+              "The grading system at KMIT follows the standard university guidelines and includes continuous assessment and final exams."
+          ],
+          "keywords": [
+              "academic calendar",
+              "exam schedules",
+              "scholarships",
+              "grading system"
+          ]
+      },
+      {
+          "tag": "Library Services",
+          "patterns": [
+              "Does KMIT have a library?",
+              "What are the library hours?",
+              "How can I borrow books from the library?",
+              "Are there any online resources available in the library?"
+          ],
+          "responses": [
+              "Yes, KMIT has a well-stocked library with a vast collection of books, journals, and digital resources.",
+              "The library hours are typically from 9 AM to 6 PM on weekdays.",
+              "You can borrow books from the library by using your student ID card and following the library rules.",
+              "Yes, the library provides access to various online resources, including e-books, research papers, and academic databases."
+          ],
+          "keywords": [
+              "library",
+              "library hours",
+              "borrow books",
+              "online resources"
+          ]
+      },
+      {
+          "tag": "Placement and Career Services",
+          "patterns": [
+              "What companies visit KMIT for placements?",
+              "What is the placement rate of KMIT?",
+              "Are there any career counseling services available?",
+              "How can I prepare for campus placements?"
+          ],
+          "responses": [
+              "Many reputed companies, including MNCs, visit KMIT for campus placements. The list of companies is available on the placement cell's website.",
+              "KMIT has a high placement rate, with many students securing jobs in top companies every year.",
+              "Yes, KMIT provides career counseling services to help students with career planning and job search.",
+              "You can prepare for campus placements by attending training sessions, workshops, and mock interviews organized by the placement cell."
+          ],
+          "keywords": [
+              "placements",
+              "placement rate",
+              "career counseling",
+              "campus placements"
+          ]
+      },
+    {
+          "tag": "Accreditation Information",
+          "patterns": [
+              "Is KMIT accredited?",
+              "What is the accreditation status of KMIT?",
+              "Tell me about KMIT's NAAC accreditation."
+          ],
+          "responses": [
+              "KMIT is accredited by the National Assessment and Accreditation Council (NAAC) with an 'A' Grade. This accreditation reflects the institute's commitment to quality education and continuous improvement."
+          ],
+          "keywords": [
+              "accreditation",
+              "NAAC",
+              "A Grade"
+          ]
+      },
+      {
+          "tag": "EAPCET Code Information",
+          "patterns": [
+              "What is the EAPCET code for KMIT?",
+              "Tell me the EAPCET code of KMIT.",
+              "How can I find the EAPCET code for KMIT?"
+          ],
+          "responses": [
+              "The EAPCET code for KMIT is KMIT. This code is used for admissions through the Engineering, Agriculture, and Pharmacy Common Entrance Test (EAPCET)."
+          ],
+          "keywords": [
+              "EAPCET code",
+              "KMIT",
+              "admissions"
+          ]
+      },
+
+      {
+          "tag": "Founder Information",
+          "patterns": [
+              "Who is the founder of KMIT?",
+              "Tell me about Mr. Neil Gogte.",
+              "Can you provide details about the founder of KMIT?"
+          ],
+          "responses": [
+              "Mr. Neil Gogte is the Founder Director and heads KMIT (Keshav Memorial Institute of Technology). He holds a Master's Degree in Computer Science from IIT-Mumbai and a B.E degree from Osmania University, Hyderabad. He started his career with CMC Ltd., and was part of the development team of Office Mate, an Office Automation application. He then worked at Sun Microsystems, USA, on the development of SUNRAI, an interface to backend ERP applications running on IBM systems. He also headed Leapstone Inc's India Offshore development center.",
+              "In 1991, Mr. Neil Gogte established Genesis Solutions Pvt. Ltd., an IT education and training firm. During this period, he offered training and consultancy on various projects involving technologies like C, C++, Oracle, Oracle financials, SAP, Java, Microsoft.NET, J2ME, and BREW. He has trained more than 70,000+ Software Professionals and has been a guiding force for engineering graduates and M.Tech students.",
+              "Mr. Neil Gogte is a successful technocrat-entrepreneur with over 25 years of experience in the IT industry. He works with engineering students on development and experimental projects, contributing to software development and training. His vision and multitude of skills motivate the team at TeleUniv to continue contributing towards development and education in society."
+          ],
+          "keywords": [
+              "founder",
+              "Mr. Neil Gogte",
+              "KMIT"
+          ]
+      },
+    {
+          "tag": "CSE_HOD",
+          "patterns": [
+              "Who is the HOD of CSE?",
+              "Tell me about the CSE HOD.",
+              "Who heads the CSE department?"
+          ],
+          "responses": [
+              "The HOD of the CSE department is Dr. Vemula Aruna. In-charge HODs include Ms. T. Rupa Devi and Ms. Priyanka Saxena."
+          ],
+          "keywords": [
+              "CSE HOD",
+              "CSE department head",
+              "CSE head of department"
+          ]
+      },
+      {
+          "tag": "IT_HOD",
+          "patterns": [
+              "Who is the HOD of IT?",
+              "Tell me about the IT HOD.",
+              "Who heads the IT department?"
+          ],
+          "responses": [
+              "The HOD of the IT department is Dr. G. Narender. In-charge HOD is Mr. Para Upendar."
+          ],
+          "keywords": [
+              "IT HOD",
+              "IT department head",
+              "IT head of department"
+          ]
+      },
+      {
+          "tag": "AIML_HOD",
+          "patterns": [
+              "Who is the HOD of AIML?",
+              "Tell me about the AIML HOD.",
+              "Who heads the AIML department?"
+          ],
+          "responses": [
+              "The HOD of the AIML department is Dr. T.V.G. Sridevi."
+          ],
+          "keywords": [
+              "AIML HOD",
+              "AIML department head",
+              "AIML head of department"
+          ]
+      },
+      {
+          "tag": "CSD_HOD",
+          "patterns": [
+              "Who is the HOD of CSD?",
+              "Tell me about the CSD HOD.",
+              "Who heads the CSD department?"
+          ],
+          "responses": [
+              "The HOD of the CSD department is Mr. K. Anil."
+          ],
+          "keywords": [
+              "CSD HOD",
+              "CSD department head",
+              "CSD head of department"
+          ]
+      },
+      {
+          "tag": "HS_HOD",
+          "patterns": [
+              "Who is the HOD of H&S?",
+              "Tell me about the H&S HOD.",
+              "Who heads the H&S department?"
+          ],
+          "responses": [
+              "The HODs of the H&S department are Ms. Saritha Gone and Dr. Balakrishna Ushakoyala."
+          ],
+          "keywords": [
+              "H&S HOD",
+              "H&S department head",
+              "H&S head of department"
+          ]
+      },
+    {
+          "tag": "All_HODs",
+          "patterns": [
+              "Give me all the HODs in KMIT",
+              "List all the department heads at KMIT",
+              "Who are the HODs at KMIT?"
+          ],
+          "responses": [
+              "Here are the HODs at KMIT:\n\n- **CSE**: Dr. Vemula Aruna, Ms. T. Rupa Devi (In-charge), Ms. Priyanka Saxena (In-charge)\n- **IT**: Dr. G. Narender, Mr. Para Upendar (In-charge)\n- **AIML**: Dr. T.V.G. Sridevi\n- **CSD**: Mr. K. Anil\n- **H&S**: Ms. Saritha Gone, Dr. Balakrishna Ushakoyala"
+          ],
+          "keywords": [
+              "all HODs",
+              "department heads",
+              "KMIT HODs"
+          ]
+      },
+    {
+          "tag": "Academic_Core_Committee",
+          "patterns": [
+              "Tell me about the Academic Core Committee at KMIT",
+              "Who are the members of the Academic Core Committee?",
+              "What are the functions of the Academic Core Committee at KMIT?"
+          ],
+          "responses": [
+              "The Academic Core Committee at KMIT oversees various academic functions such as subject allocation based on expertise, performing gap analysis, devising strategies for course outcomes, monitoring course delivery, considering periodic feedback for corrective measures, and monitoring student academic reviews. The committee also assesses compliance with university curriculum to attain PO’s and PSO’s through direct and indirect assessments. The members for the year 2023-24 are:\n\n1. **Dr. BL. Malleswari** (Principal KMIT) - Chairperson\n2. **Dr. K. Bhargavi** (CSE (AI&ML)) - Convenor\n3. **Dr. S. Udaya Lakshmi** (CoE) - Member\n4. **Mr. G. Rakesh Reddy** (CSE) - Member\n5. **Mr. A L. Narsimha Rao** (H&S) - Member\n6. **Ms. M. Saradamani** (H&S) - Member\n7. **Dr. M. Anuradha** (CSE) - Member\n8. **Dr. Vishal Reddy** (CSE (DS)) - Member"
+          ],
+          "keywords": [
+              "Academic Core Committee",
+              "KMIT committee",
+              "committee members"
+          ]
+      },
+      {
+          "tag": "About_Deepa_Ganu",
+          "patterns": [
+              "Tell me about Deepa Ganu",
+              "Who is Deepa Ganu?",
+              "Give me information about the Academic Director of KMIT"
+          ],
+          "responses": [
+              "Deepa Ganu is the Academic Director of KMIT. She holds a B. Tech in ECE from Pune University and an M.Tech from JNTU Hyderabad. She is dedicated to the academic progress of students and staff. She has trained thousands of students, authored a book titled 'JAVA spoken Tutorials', and received prestigious awards such as 'Best Mentor' and 'Acharya'."
+          ],
+          "keywords": [
+              "Deepa Ganu",
+              "Academic Director",
+              "KMIT"
+          ]
+      },
+    {
+          "tag": "About_Nitin_Sahasrabudhe",
+          "patterns": [
+              "Tell me about Mr. Nitin Sahasrabudhe",
+              "Who is Nitin Sahasrabudhe?",
+              "Give me information about the Director of Genesis Solutions"
+          ],
+          "responses": [
+              "Mr. Nitin Sahasrabudhe is the Director of Genesis Solutions Pvt. Ltd. He holds a Bachelor's degree in Electronics & Communications Engineering. He has over 25 years of experience in project and product sales in Healthcare and IT industries, and has worked with various companies in India and abroad in the field of Sales."
+          ],
+          "keywords": [
+              "Nitin Sahasrabudhe",
+              "Director",
+              "Genesis Solutions"
+          ]
+      },
+    {
+          "tag": "About_Narasimha_Reddy",
+          "patterns": [
+              "Tell me about Justice L. Narasimha Reddy",
+              "Who is L. Narasimha Reddy?",
+              "Give me information about Shri L. Narasimha Reddy"
+          ],
+          "responses": [
+              "Justice L. Narasimha Reddy is the Chief Justice of Patna High Court and was the senior-most judge of Hyderabad High Court. Born in an agricultural family in Gavicharla village, Warangal, Telangana, he earned his B.Sc. degree from C.K.M. College, Warangal, and received his Bachelor's and Master's Degrees in Law (International Law) from Osmania University, Hyderabad."
+          ],
+          "keywords": [
+              "Narasimha Reddy",
+              "Justice",
+              "Patna High Court"
+          ]
+      },
+    {
+          "tag": "About_KMES",
+          "patterns": [
+              "Tell me about KMES",
+              "What is Keshav Memorial Educational Society?",
+              "Give me information about KMES"
+          ],
+          "responses": [
+              "Keshav Memorial Educational Society (KMES) was founded in 1940 with the motto 'Service through Education'. It is known for running various reputable educational institutes in Hyderabad for the past 75 years. KMES was formed in memory of Justice Keshav Rao Koratkar, an educationist, social reformer, and political activist."
+          ],
+          "keywords": [
+              "KMES",
+              "Keshav Memorial Educational Society",
+              "education"
+          ]
+      },
+      {
+          "tag": "About_IIC",
+          "patterns": [
+              "Tell me about the Institution Innovation Council",
+              "What is the IIC at KMIT?",
+              "Give me information about the IIC"
+          ],
+          "responses": [
+              "The Institution Innovation Council (IIC) at KMIT aims to transform campus recruitment and internship models to meet talent needs. It focuses on continuous education, strategic alliances, building talent pipelines, promoting academic entrepreneurship, and enabling national goals for digitization. The IIC also conducts events like the 21st Century Skills Workshop. For more details, visit: [IIC KMIT](https://kmit.in/research/iic.php)"
+          ],
+          "keywords": [
+              "IIC",
+              "Institution Innovation Council",
+              "KMIT"
+          ]
+      },
+
+      {
+          "tag": "College_Committees",
+          "patterns": [
+              "Tell me about the college committees at KMIT",
+              "What are the different committees in KMIT?",
+              "Give me information about the committees at KMIT"
+          ],
+          "responses": [
+              "For information about the various college committees at KMIT, please visit: [College Committees](https://kmit.in/administration/othercommittees.php)"
+          ],
+          "keywords": [
+              "college committees",
+              "KMIT committees",
+              "committees"
+          ]
+      },
+
+      {
+          "tag": "Courses_Offered",
+          "patterns": [
+              "Tell me about the courses offered at KMIT",
+              "What B.Tech programs does KMIT offer?",
+              "Give me information about the B.Tech courses at KMIT"
+          ],
+          "responses": [
+              "KMIT offers the following B.Tech programs:\n\n1. **B.Tech in Computer Science & Engineering (CSE)**: Total Intake - 540, Management Seats/NRI Seats - 162, Convenor seats - 378\n2. **B.Tech in Computer Science & Engineering (Artificial Intelligence & Machine Learning) (CSM)**: Total Intake - 300, Management Seats/NRI Seats - 90, Convenor seats - 210"
+          ],
+          "keywords": [
+              "courses",
+              "B.Tech programs",
+              "KMIT"
+          ]
+      },
+      {
+          "tag": "Course_Strength",
+          "patterns": [
+              "What is the intake for CSE at KMIT?",
+              "How many seats are available for CSE at KMIT?",
+              "Tell me the strength of CSE course at KMIT"
+          ],
+          "responses": [
+              "The B.Tech in Computer Science & Engineering (CSE) at KMIT has a total intake of 540 students. Out of these, 162 seats are for Management/NRI and 378 seats are for Convenor."
+          ],
+          "keywords": [
+              "CSE intake",
+              "CSE seats",
+              "course strength"
+          ]
+      },
+      {
+          "tag": "Course_Strength_AIML",
+          "patterns": [
+              "What is the intake for AIML at KMIT?",
+              "How many seats are available for AIML at KMIT?",
+              "Tell me the strength of AIML course at KMIT"
+          ],
+          "responses": [
+              "The B.Tech in Computer Science & Engineering (Artificial Intelligence & Machine Learning) (CSM) at KMIT has a total intake of 300 students. Out of these, 90 seats are for Management/NRI and 210 seats are for Convenor."
+          ],
+          "keywords": [
+              "AIML intake",
+              "AIML seats",
+              "course strength"
+          ]
+      
+    },
+    {
+          "tag": "BTech_Eligibility",
+          "patterns": [
+              "What is the eligibility for B.Tech programs at KMIT?",
+              "Tell me about the admission criteria for B.Tech at KMIT",
+              "How can I get admission to B.Tech at KMIT?"
+          ],
+          "responses": [
+              "Admissions to the B.Tech program at KMIT are made through the common entrance test (EAPCET) conducted by the Govt. of Telangana State. The minimum qualification is a pass in Intermediate (10+2) with Mathematics, Physics, and Chemistry. 70% of the seats are allotted based on EAPCET merit, and 30% for Management/NRI candidates. Diploma holders can join in the second year through ECET."
+          ],
+          "keywords": [
+              "B.Tech eligibility",
+              "admission criteria",
+              "KMIT"
+          ]
+      },
+      {
+          "tag": "BTech_Fee_Structure",
+          "patterns": [
+              "What is the fee structure for B.Tech at KMIT?",
+              "Tell me about the fees for B.Tech programs at KMIT",
+              "How much is the tuition fee for B.Tech at KMIT?"
+          ],
+          "responses": [
+              "The fee structure for the B.Tech program at KMIT for the year 2024-25 is as follows:\n\n- Tuition Fee: ₹ 103,000 per year\n- Special Fee: ₹ 5,500 for the first year, ₹ 2,500 for subsequent years\n- NBA Fee: ₹ 3,000 per year\n\nFor more information, please contact the Admissions Department at 6302140205."
+          ],
+          "keywords": [
+              "B.Tech fee",
+              "fee structure",
+              "KMIT"]
+    },
+    {
+          "tag": "EAPCET_Last_Ranks",
+          "patterns": [
+              "What are the last ranks for EAPCET?",
+              "Tell me about EAPCET last ranks",
+              "Where can I find information about EAPCET last ranks?"
+          ],
+          "responses": [
+              "For detailed information about EAPCET/EAMCET last ranks and other related details, you can visit: [EAPCET/EAMCET Last Ranks](https://collegedunia.com/exams/ts-eamcet/cutoff)."
+          ],
+          "keywords": [
+              "EAPCET last ranks",
+              "EAMCET cutoff",
+              "last ranks information"
+          ]
+      },
+    {
+          "tag": "ECET_Last_Ranks",
+          "patterns": [
+              "What are the last ranks for ECET?",
+              "Tell me about ECET last ranks",
+              "Where can I find information about ECET last ranks?"
+          ],
+          "responses": [
+              "For detailed information about ECET last ranks and other related details, you can visit: [ECET Last Ranks](https://www.collegedekho.com/exam/ts-ecet/marks-vs-rank)."
+          ],
+          "keywords": [
+              "ECET last ranks",
+              "ECET cutoff",
+              "last ranks information"
+          ]
+      },
+    {
+          "tag": "Placement_Information",
+          "patterns": [
+              "Tell me about placements at KMIT",
+              "What are the placement statistics for KMIT?",
+              "Give me information about KMIT's placements"
+          ],
+          "responses": [
+              "KMIT continues to maintain a record of successful placements for the 2023-2024 batch. So far, 103 companies have visited the campus and 662 offers were rolled out. 511 out of 557 registered students got placed with an average salary of 9.69 LPA."
+          ],
+          "keywords": [
+              "placements",
+              "KMIT placements",
+              "placement statistics"
+          ]
+      },
+      {
+          "tag": "Placement_Highlights",
+          "patterns": [
+              "What are the placement highlights at KMIT?",
+              "Tell me about the top placements at KMIT",
+              "Give me information about the highest placement offers at KMIT"
+          ],
+          "responses": [
+              "Placement Highlights at KMIT for the 2023-2024 batch:\n\n1. 10 students received job offers with a salary of more than 40 lakhs per annum.\n2. 6 students received job offers with salaries between 20 to 40 lakhs per annum.\n3. 61 students received job offers with salaries between 15 to 20 lakhs per annum.\n4. 149 students received job offers with salaries between 10 to 15 lakhs per annum.\n5. 71 students received job offers with salaries between 8 to 10 lakhs per annum.\n6. 174 students received job offers with salaries between 6 to 8 lakhs per annum.\n7. 63 students received job offers with salaries between 5 to 6 lakhs per annum."
+          ],
+          "keywords": [
+              "placement highlights",
+              "highest placement offers",
+              "top placements"
+          ]
+      },
+      {
+          "tag": "Placement_Success_Stories",
+          "patterns": [
+              "Tell me about the success stories at KMIT",
+              "What are the placement success stories at KMIT?",
+              "Give me information about KMIT's placement success"
+          ],
+          "responses": [
+              "KMIT is thrilled to announce a record-setting placement for the Class of 2024. A sincere thank you to all recruiters for recognizing the potential in our students and standing by them in the face of adversity. Your invaluable contribution has secured placements and instilled confidence in our students as they embark on their corporate journey. Congratulations to the Class of 2024 on your well-deserved success!"
+          ],
+          "keywords": [
+              "success stories",
+              "placement success",
+              "KMIT success"
+          ]
+      },
+      {
+          "tag": "Placement_Contact",
+          "patterns": [
+              "Who can I contact for placement information at KMIT?",
+              "Give me the contact details for KMIT placements",
+              "How can I reach the placement department at KMIT?"
+          ],
+          "responses": [
+              "For more information about placements, please contact the Admissions Department at 6302140205."
+          ],
+          "keywords": [
+              "placement contact",
+              "placement information",
+              "KMIT placements"
+          ]
+      },
+      {
+          "tag": "Top_Recruiters",
+          "patterns": [
+              "Who are the top recruiters at KMIT?",
+              "Which companies offered the highest salaries at KMIT?",
+              "Give me information about top recruiters at KMIT"
+          ],
+          "responses": [
+              "Top recruiters at KMIT for the 2023-2024 batch include:\n\n1. Intuit - 49.8 LPA\n2. Salesforce - 47 LPA\n3. Amazon - 44 LPA\n4. ServiceNow - 42.17 LPA\n5. Commvault - 33 LPA\n6. Flipkart - 25.8 LPA\n7. Darwinbox - 25.3 LPA"
+          ],
+          "keywords": [
+              "top recruiters",
+              "highest salaries",
+              "KMIT recruiters"
+          ]
+      },
+      {
+          "tag": "Internship_Details",
+          "patterns": [
+              "Tell me about the internship opportunities at KMIT",
+              "Which companies offer internships at KMIT?",
+              "Give me information about internships for KMIT students"
+          ],
+          "responses": [
+              "Some of the companies offering internships at KMIT include:\n\n1. Intuit - 100000 per month\n2. Salesforce - 125000 per month\n3. Amazon - 110000 per month\n4. Darwinbox - 25000 per month\n5. F5 Networks - 75000 per month\n6. eAppSys - 15000 per month\n7. Wadhwani AI - 40000 per month"
+          ],
+          "keywords": [
+              "internships",
+              "internship opportunities",
+              "KMIT internships"
+          ]
+      },
+    {
+          "tag": "Companies_Visited",
+          "patterns": [
+              "Which companies visited KMIT for placements?",
+              "Tell me about the companies that visited KMIT for placements",
+              "Give me information about the companies that recruited from KMIT"
+          ],
+          "responses": [
+              "The following companies visited KMIT for placements:\n\n1. Intuit\n2. Salesforce\n3. Amazon\n4. ServiceNow\n5. Commvault\n6. Flipkart\n7. Darwinbox\n8. F5 Networks\n9. eAppSys\n10. Wadhwani AI\n11. Interactive Brokers\n12. Eksaq\n13. NCR Voyix\n14. Experian\n15. Adobe\n16. Techolution\n17. Lloyds\n18. Safertek IT Solutions\n19. GAP\n20. Realpage\n21. AutoRabit\n22. ZerocodeHR\n23. Kodem Legal\n24. Nowfloats\n25. O.C.Tanner\n26. TCP Wave\n27. Keyloop\n28. Lumen Technologies\n29. EPAM\n30. Audintel\n31. Copart\n32. Brane Enterprises PAAS\n33. DeltaX\n34. Edwisely\n35. Geniecampus\n36. OSI Digital\n37. TCS Digital\n38. Zemoso Labs\n39. Taxman\n40. Unschool\n41. Hexagon\n42. Apptmyz\n43. Netenrich\n44. Teleparadigm Networks\n45. ADP\n46. Phenom\n47. Modak Analytics\n48. Spinsci\n49. Edgeforce\n50. Makro\n51. Tapits\n52. Wielabs\n53. XIT Solutions\n54. AIM\n55. Tek Systems\n56. Hexaware\n57. Hitachi\n58. Pro Discover\n59. Eidiko Systems\n60. Omnicloud\n61. Brane Enterprises SAAS\n62. Adtechcorp\n63. Nowcom\n64. CloudAngles\n65. Softek\n66. RispostaCorp\n67. Nalsoft\n68. Persistent Systems\n69. Pronix\n70. SoftforceApps\n71. Infospoke\n72. Fujitsu\n73. Ashling Partners\n74. Databeat\n75. Redshift\n76. Cyient\n77. Proteam Advisory\n78. SMBXL\n79. Nations Benefits\n80. TCS\n81. Alacriti\n82. Wilcosource\n83. Cregx\n84. Endeaavour Technologies\n85. Movate\n86. GAC Digital"
+          ],
+          "keywords": [
+              "companies visited",
+              "recruiters",
+              "placement companies"
+          ]
+      },
+    
+    {
+          "tag": "Exam_Branch_Contact",
+          "patterns": [
+              "How can I contact the exam branch at KMIT?",
+              "Give me the contact information for the exam branch at KMIT",
+              "Who do I contact for exam-related queries at KMIT?"
+          ],
+          "responses": [
+              "You can contact the exam branch at KMIT with the following information:\n\nTIMINGS: 09:30 AM to 04:00 PM (ONLY ON WORKING DAYS)\n\nAUTONOMOUS:\n- CONTACT NUMBER: +91-9391614325\n- EMAIL ID: autonomousams@gmail.com\n\nNON-AUTONOMOUS (JNTUH-Exams):\n- CONTACT NUMBER: 040-23261407\n- EMAIL ID: exams@kmit.in"
+          ],
+          "keywords": [
+              "exam branch contact",
+              "contact information",
+              "KMIT exam contact"
+          ]
+      },
+{
+          "tag": "Tessellator_LMS",
+          "patterns": [
+              "What is Tessellator at KMIT?",
+              "Tell me about KMIT's learning management system",
+              "Give me information about Tessellator at KMIT"
+          ],
+          "responses": [
+              "Tessellator is KMIT’s learning management system. It is a customized version of Moodle, an open-source learning management system provided by Google. KMIT has tailored it to meet its needs and uses it on multiple networks. Tessellator offers two modules: After each programming class, students take a quiz with multiple-choice questions, followed by a form with guidelines to write code (e.g., JAVA, C) related to the class. Slow learners may work on a single program, while fast learners can advance to the third program. KMIT has extended Moodle's capabilities to include code compilation techniques for JAVA, C, and other programming languages."
+          ],
+          "keywords": [
+              "Tessellator",
+              "learning management system",
+              "KMIT",
+              "Moodle"
+          ]
+      },
+{
+          "tag": "Sanjaya_App",
+          "patterns": [
+              "What is the Sanjaya App?",
+              "Tell me about the Sanjaya App at KMIT",
+              "Give me information about the Sanjaya App"
+          ],
+          "responses": [
+              "Sanjaya is an Android App built to give parents all the details about their ward’s progress at KMIT. Parents can check attendance, time-table, performance, events, and results, and even look at the classroom. The live-classroom feature is popular among parents. Sanjaya also provides notifications for class cancellations and has a 'Contact KMIT' feature. Download SanjayaApp."
+          ],
+          "keywords": [
+              "Sanjaya App",
+              "parent app",
+              "KMIT"
+          ]
+      },
+      {
+          "tag": "Drona_App",
+          "patterns": [
+              "What is the Drona App?",
+              "Tell me about the Drona App at KMIT",
+              "Give me information about the Drona App"
+          ],
+          "responses": [
+              "Drona is an Android App built specifically for the teaching faculty at KMIT. It simplifies marking attendance, adding disciplinary points, accessing timetables, and receiving important notifications and messages about college events. Download DronaApp."
+          ],
+          "keywords": [
+              "Drona App",
+              "faculty app",
+              "KMIT"
+          ]
+      },
+      {
+          "tag": "Netra_App",
+          "patterns": [
+              "What is the Netra App?",
+              "Tell me about the Netra App at KMIT",
+              "Give me information about the Netra App"
+          ],
+          "responses": [
+              "Netra is an Android App built for KMIT students. It provides access to attendance, time-table, performance, events, results, and Konversations – Technical and General videos to stay updated with the industry. Students also receive notifications for class cancellations. Download NetraApp."
+          ],
+          "keywords": [
+              "Netra App",
+              "student app",
+              "KMIT"
+          ]
+      }
+
+  
   ]
 }

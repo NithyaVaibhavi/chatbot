@@ -22,6 +22,10 @@ for intent in intents['intents']:
         w = tokenize(pattern)
         all_words.extend(w)
         xy.append((w, intent['tag']))
+        
+    for keyword in intent.get('keywords', []):  # Use .get() to avoid KeyError
+        w = tokenize(keyword)
+        all_words.extend(w)
 
 all_words = [stem(w) for w in all_words if w not in puncts]
 
