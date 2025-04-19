@@ -58,26 +58,22 @@
     "responses": ["Happy to help!", "Any time!", "My pleasure"]
   },
   {
-      "tag": "faculty",
-      "patterns": [
-          "Do you know the teachers ?",
-          "Who are the teachers ?",
-          "Can you tell more about teachers?",
-          "Tell me about teachers  ",
-          "more info on teachers",
-          "what are the teachers ?",
-          "tell more about the teachers",
-          "narula teachers",
-          "who is the the principal and what about the placement officer??" 
-      ],
-      "keywords": [
-          "teacher", "faculty", "professor", "lecturer", "principal", "staff",
-          "placement", "department", "prof", "mentor", "trainer"
-      ],
-      "responses": [
-          "Our Principal is Dr. Maitreyi Ray Kanjilal \n Our Placement Cell has Biswarup Bhattacharjee, Abhijit Nandy, Debanjan Mitra."
-      ]
+    "tag": "BTech_Eligibility",
+    "patterns": [
+      "What is the eligibility for B.Tech programs at KMIT?",
+      "Tell me about the admission criteria for B.Tech at KMIT",
+      "How can I get admission to B.Tech at KMIT?"
+    ],
+    "keywords": [
+      "B.Tech eligibility",
+      "admission criteria",
+      "KMIT"
+    ],
+    "responses": [
+      "Admissions to the B.Tech program at KMIT are made through the common entrance test (EAPCET) conducted by the Govt. of Telangana State. The minimum qualification is a pass in Intermediate (10+2) with Mathematics, Physics, and Chemistry. 70% of the seats are allotted based on EAPCET merit, and 30% for Management/NRI candidates. Diploma holders can join in the second year through ECET."
+    ]
   },
+
   {
       "tag": "courses",
       "patterns": [
@@ -501,6 +497,7 @@
     {
           "tag": "About_Narasimha_Reddy",
           "patterns": [
+              "who is the president of kmit",
               "Tell me about Justice L. Narasimha Reddy",
               "Who is L. Narasimha Reddy?",
               "Give me information about Shri L. Narasimha Reddy"
@@ -509,6 +506,7 @@
               "Justice L. Narasimha Reddy is the Chief Justice of Patna High Court and was the senior-most judge of Hyderabad High Court. Born in an agricultural family in Gavicharla village, Warangal, Telangana, he earned his B.Sc. degree from C.K.M. College, Warangal, and received his Bachelor's and Master's Degrees in Law (International Law) from Osmania University, Hyderabad."
           ],
           "keywords": [
+              "President",
               "Narasimha Reddy",
               "Justice",
               "Patna High Court"
@@ -561,23 +559,6 @@
               "college committees",
               "KMIT committees",
               "committees"
-          ]
-      },
-
-      {
-          "tag": "Courses_Offered",
-          "patterns": [
-              "Tell me about the courses offered at KMIT",
-              "What B.Tech programs does KMIT offer?",
-              "Give me information about the B.Tech courses at KMIT"
-          ],
-          "responses": [
-              "KMIT offers the following B.Tech programs:\n\n1. **B.Tech in Computer Science & Engineering (CSE)**: Total Intake - 540, Management Seats/NRI Seats - 162, Convenor seats - 378\n2. **B.Tech in Computer Science & Engineering (Artificial Intelligence & Machine Learning) (CSM)**: Total Intake - 300, Management Seats/NRI Seats - 90, Convenor seats - 210"
-          ],
-          "keywords": [
-              "courses",
-              "B.Tech programs",
-              "KMIT"
           ]
       },
       {
@@ -684,7 +665,7 @@
               "Give me information about KMIT's placements"
           ],
           "responses": [
-              "KMIT continues to maintain a record of successful placements for the 2023-2024 batch. So far, 103 companies have visited the campus and 662 offers were rolled out. 511 out of 557 registered students got placed with an average salary of 9.69 LPA."
+              "KMIT continues to maintain a record of successful placements for the 2023-2024 batch. So far, 103 companies have visited the campus and 662 offers were rolled out. 511 out of 557 registered students got placed with an average salary of 9.69 LPA.\nFor more information visit https://kmit.in/placements/placement.php"
           ],
           "keywords": [
               "placements",
@@ -869,8 +850,178 @@
               "student app",
               "KMIT"
           ]
+      },
+      {
+        "tag": "Uniqueness_Of_KMIT",
+        "patterns": [
+          "What makes KMIT unique?",
+          "Tell me about the unique features of KMIT",
+          "Give me information about what sets KMIT apart"
+        ],
+        "responses": [
+          "KMIT stands out with several unique features:\n\n1. **Tessellator**: A customized learning management system based on Moodle, offering quizzes and code compilation techniques for various programming languages.\n\n2. **TeleUniv**: A Technological Leveraging platform providing engaging and immersive interactive delivery, live Cloud-based Labs, and 500 hours of recorded content on KMITTV.\n\n3. **Interactive Classroom Teaching**: Utilizing smart classrooms, learning management systems, case studies, problem-based learning, flipped classrooms, and interactive assessments.\n\n4. **KMIT TV**: A platform with 500 hours of recorded content, offering unlimited access to academic and industry-related courses.\n\n5. **Audio-Visual Centre**: Equipped with advanced technologies for creating and enhancing audio and video content for educational purposes.\n\nThese features contribute to a dynamic and innovative learning environment at KMIT."
+        ],
+        "keywords": [
+          "uniqueness",
+          "unique features",
+          "KMIT"
+        ]
+      },{
+        "tag": "Interactive_Classroom_Teaching",
+        "patterns": [
+          "What is interactive classroom teaching at KMIT?",
+          "Tell me about interactive classroom teaching at KMIT",
+          "Give me information about KMIT's interactive teaching methods"
+        ],
+        "responses": [
+          "Interactive classroom teaching at KMIT promotes active participation from students, enhancing their learning experience. This method uses technology like smart classrooms and learning management systems, incorporates active learning methods such as case studies and problem-based learning, and employs flipped classroom techniques. Interactive assessments, industry collaboration, and hands-on practice further enrich the learning process."
+        ],
+        "keywords": [
+          "interactive teaching",
+          "classroom teaching",
+          "KMIT teaching methods"
+        ]
+      },
+      {
+        "tag": "KMIT_TV",
+        "patterns": [
+          "What is KMIT TV?",
+          "Tell me about KMIT TV",
+          "Give me information about KMIT TV"
+        ],
+        "responses": [
+          "KMITTV provides 500 hours of recorded content ranging from academic to industry-related courses. Students can listen to any session as many times as they need to feel confident about a concept. It features videos of live classroom lectures and learning from subject matter experts. KMITTV is free and offers unlimited access."
+        ],
+        "keywords": [
+          "KMIT TV",
+          "recorded content",
+          "KMIT"
+        ]
+      },
+      {
+        "tag": "TeleUniv",
+        "patterns": [
+          "What is TeleUniv?",
+          "Tell me about TeleUniv at KMIT",
+          "Give me information about TeleUniv"
+        ],
+        "responses": [
+          "TeleUniv is a Technological Leveraging platform at KMIT that provides an engaging and immersive interactive mode of delivery. It aims to reduce the productivity and employability skills gap in India through a dynamic and interactive digital process. TeleUniv offers live Cloud-based Labs with instant assessment, recorded content on KMITTV, and unlimited access to free academic and industry-related courses."
+        ],
+        "keywords": [
+          "TeleUniv",
+          "KMIT",
+          "digital learning"
+        ]
+      },
+      {
+        "tag": "Research_At_KMIT",
+        "patterns": [
+          "Tell me about research at KMIT",
+          "What is the R&D cell at KMIT?",
+          "Does KMIT support research?",
+          "How does KMIT promote research and development?",
+          "Give me information about research facilities in KMIT"
+        ],
+        "responses": [
+          "Research is the foundation of any nation’s economic growth and Keshav Memorial Institute of Technology (KMIT) is committed to long-term research in emerging areas of engineering and technology. Recognizing the importance of R&D in institutional growth, KMIT has established a dedicated R&D cell focused on scientific and industrial research. A state-of-the-art, customized research lab supports this initiative. The cell facilitates, channelizes, records, and regulates academic, sponsored, and collaborative research projects, as well as consultancy works. KMIT collaborates with reputed institutions like DRDL, Tech Mahindra, and others. Faculty from various departments have also received funding from both Government and Non-Government agencies."
+        ],
+        "keywords": [
+          "research",
+          "R&D cell",
+          "KMIT research",
+          "research lab",
+          "collaboration"
+        ]
+      },
+      {
+        "tag": "CAD_Cancer_Research",
+        "patterns": [
+          "What is the CAD system developed at KMIT?",
+          "Tell me about the AI project for cancer detection at KMIT",
+          "Has KMIT worked on cancer diagnosis research?",
+          "Give me details about the CAD diagnostics system",
+          "What research has KMIT done in cancer detection?"
+        ],
+        "responses": [
+          "KMIT has been involved in developing a Clinical Translational Research CAD (Computer Aided Disease Detection & Diagnostics System) for various cancers. This AI-powered end-to-end clinical diagnostics system follows the College of American Pathologists (CAP) protocols and integrates biomedical imaging (Pathology, Radiology) and biomarker identification. The initial focus is on Breast Cancer detection. The project received INR 50 Lakhs in funding (BIRAC/IKP01207/BIG-16/20) from BIRAC (Bio-technology Industry Research Assistance Council), Department of Biotechnology, Government of India."
+        ],
+        "keywords": [
+          "CAD",
+          "cancer research",
+          "clinical diagnostics",
+          "AI in healthcare",
+          "breast cancer",
+          "BIRAC",
+          "radiology",
+          "pathology",
+          "KMIT research"
+        ]
+      },
+      {
+        "tag": "Sponsored_Research_Projects",
+        "patterns": [
+          "Tell me about sponsored research at KMIT",
+          "Tell me about some sponsered projects in kmit",
+          "Information on KMIT's sponsored research initiatives"
+        ],
+        "responses": [
+          "KMIT is engaged in a sponsored research project focused on developing a Clinical Translational Research CAD (Computer Aided Disease Detection & Diagnostics System) for various cancers, initially targeting breast cancer. This AI-powered system aligns with the College of American Pathologists (CAP) protocols and integrates biomedical imaging (Pathology, Radiology) for biomarker identification. The project has received INR 50 Lakhs in funding (BIRAC/IKP01207/BIG-16/20) from BIRAC (Biotechnology Industry Research Assistance Council), Department of Biotechnology, Government of India. For more information, visit: https://kmit.in/research/sponsoredresearch.php"
+        ],
+        "keywords": [
+          "sponsored research",
+          "CAD system",
+          "KMIT research"
+        ]
+      },
+      {
+        "tag": "Contact_Info_Email",
+        "patterns": [
+          "What is the official email ID of KMIT?",
+          "How can I contact KMIT?",
+          "Give me the KMIT mail ID",
+          "I need the email address of KMIT",
+          "Where can I send queries to KMIT?",
+          "KMIT email",
+          "Contact email of KMIT",
+          "Mail ID for KMIT"
+        ],
+        "responses": [
+          "You can reach out to KMIT via email at **info@kmit.in** for any queries or information."
+        ],
+        "keywords": [
+          "contact",
+          "email",
+          "mail",
+          "mail ID",
+          "info@kmit.in",
+          "KMIT email",
+          "support",
+          "queries"
+        ]
+      },
+      {
+        "tag": "KMIT_Contact_Info",
+        "patterns": [
+          "What is the address of KMIT?",
+          "Where is KMIT located?",
+          "Give me the contact details of KMIT",
+          "What is KMIT's website?"
+        ],
+        "responses": [
+          "Keshav Memorial Institute of Technology (KMIT) is located at **3-5-1026, NARAYANGUDA, HIMAYATHNAGAR, Hyderabad, 500029**. You can contact the institute at **9849208091** or via email at **snitin@kmit.in**. For more information, visit their website: [www.kmit.in](http://www.kmit.in)."
+        ],
+        "keywords": [
+          "KMIT address",
+          "KMIT contact",
+          "KMIT location",
+          "KMIT phone number",
+          "KMIT email",
+          "KMIT website"
+        ]
       }
-
-  
+      
+      
+      
   ]
 }
