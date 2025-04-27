@@ -87,6 +87,8 @@
           "which Course are best here ?" ,
           "what about the fees Stucture ?" ,
           "Are there any medical course ?" ,
+          "what are the cources available here ?",
+          "what are the courses available in KMIT ?",
           "how many time will take to complete those course ?"
       ],
       "keywords": [
@@ -110,7 +112,7 @@
       ],
       "keywords": [
           "result", "marks", "grades", "SGPA", "CGPA", "score", "performance",
-          "semester result", "academic", "gpa", "final marks"
+          "semester result", "academic", "gpa", "final marks", "grades", "results"
       ],
       "responses": ["tell me your student id, example : \n434121010021"]
   },
@@ -1003,7 +1005,7 @@
       {
         "tag": "KMIT_Contact_Info",
         "patterns": [
-          "What is the address of KMIT?",
+          "What is the address of kmit?",
           "Where is KMIT located?",
           "Give me the contact details of KMIT",
           "What is KMIT's website?"
@@ -1018,6 +1020,23 @@
           "KMIT phone number",
           "KMIT email",
           "KMIT website"
+        ]
+      },
+      {
+        "tag": "faculty",
+        "patterns": [
+          "Do you know the teachers ?",
+          "Who are the teachers ?",
+          "Can you tell more about teachers?",
+          "Tell me about teachers  ",
+          "more info on teachers",
+          "what are the teachers ?",
+          "tell more about the teachers",
+          "kmit teachers",
+          "who is the the principal and what about the placement officer??" 
+        ],
+        "responses": [
+          "Our Prinicipal is Dr. Maitreyi Ray Kanjilal \n Our Placement Cell has Biswarup Bhattacharjee , Abhijit Nandy , Debanjan Mitra. "
         ]
       }
       
